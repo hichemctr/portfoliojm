@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio Professionnel</title>
+    <!-- Inclusion de W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Polices Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Lien vers votre fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Barre de navigation fixe -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-large">
+            
+            <!-- MENU ORDINATEUR (Visible sur grand écran, caché sur petit écran) -->
+            <div class="w3-hide-small">
+                <a href="#accueil" class="w3-bar-item w3-button w3-text-white"><i class="fa fa-home"></i> Accueil</a>
+                <a href="#projets" class="w3-bar-item w3-button w3-text-white">Projets</a>
+                <a href="#competences" class="w3-bar-item w3-button w3-text-white">Compétences</a>
+                <a href="#contact" class="w3-bar-item w3-button w3-text-white w3-right bg-custom-cyan"><i class="fa fa-envelope"></i> Contact</a>
+            </div>
+
+            <!-- MENU MOBILE / TÉLÉPHONE (Caché sur grand écran, visible sur petit écran) -->
+            <div class="w3-hide-medium w3-hide-large">
+                <a href="#accueil" class="w3-bar-item w3-button w3-text-white"><i class="fa fa-home"></i> Accueil</a>
+                <!-- Bouton hamburger avec votre image menu-btn -->
+                <button onclick="toggleMenu()" class="w3-bar-item w3-button w3-right" style="background:none; border:none; padding: 8px 16px;">
+                    <img src="menu-btn.png" alt="Menu" style="width:30px; height:30px; object-fit:contain;">
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Contenu du menu déroulant mobile (s'ouvre au clic avec TOUS les liens) -->
+        <div id="mobileMenu" class="w3-bar-block w3-dark-grey w3-hide w3-large w3-hide-medium w3-hide-large">
+            <a href="#accueil" onclick="toggleMenu()" class="w3-bar-item w3-button">Accueil</a>
+            <a href="#projets" onclick="toggleMenu()" class="w3-bar-item w3-button">Projets</a>
+            <a href="#competences" onclick="toggleMenu()" class="w3-bar-item w3-button">Compétences</a>
+            <a href="#contact" onclick="toggleMenu()" class="w3-bar-item w3-button bg-custom-cyan">Contact</a>
+        </div>
+    </div>
+
+    <!-- Section Accueil (Hero Header) -->
+    <header id="accueil" class="w3-container w3-center" style="padding:160px 16px 120px 16px;">
+        <img src="tete.jpg" alt="Avatar" class="w3-image w3-circle w3-border w3-border-cyan" style="width:150px;height:150px;object-fit:cover;">
+        <h1 class="w3-margin w3-xxlarge w3-text-white">Bonjour, je suis <span class="text-custom-cyan">Hicham Chentir</span></h1>
+        <p class="w3-xlarge w3-text-light-grey">Étudiant au lycée Jean Moulin Béziers</p>
+        <div class="w3-margin-top">
+            <a href="#projets" class="w3-button bg-custom-cyan w3-round w3-padding-large w3-margin">Voir mes projets</a>
+            <a href="#contact" class="w3-button w3-white w3-round w3-padding-large w3-margin">Me contacter</a>
+        </div>
+    </header>
+
+    <!-- Section Projets & Expériences -->
+    <div id="projets" class="w3-container w3-padding-64 w3-light-grey">
+        <div class="w3-content" style="max-width:1100px">
+            <h2 class="w3-center w3-border-bottom w3-border-cyan w3-padding-16">Mes Réalisations (Projets & Expériences)</h2>
+            <p class="w3-center w3-text-dark-grey">Découvrez ci-dessous mon parcours professionnel et mes projets techniques :</p>
+            
+            <div class="w3-row-padding" style="margin-top:48px">
+                <!-- Projet 1 : Stage dans une supérette -->
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-card-4 w3-white project-card">
+                        <div class="w3-container project-body">
+                            <div>
+                                <h3>Stage en Supérette</h3>
+                                <p class="w3-small w3-text-grey">Expérience Professionnelle</p><br><br>
+                                <p>Immersion en milieu professionnel : gestion des stocks, mise en rayon, accueil de la clientèle et encaissement.</p>
+                            </div>
+                            <div class="w3-margin-top">
+                                <a href="#" class="w3-button bg-custom-cyan w3-block">En savoir plus <i class="fa fa-info-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 : Sonomètre pour salles de classe -->
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-card-4 w3-white project-card">
+                        <div class="w3-container project-body">
+                            <div>
+                                <h3>Sonomètre Scolaire</h3>
+                                <p class="w3-small w3-text-grey">Projet de Première (Électronique / Code)</p><br>
+                                <p>Conception d'un dispositif de mesure du niveau sonore pour sensibiliser au bruit et réguler l'ambiance dans les salles de classe.</p>
+                            </div>
+                            <div class="w3-margin-top">
+                                <a href="#" class="w3-button bg-custom-cyan w3-block">Voir le projet <i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 : Amplificateur de son naturel -->
+                <div class="w3-third w3-margin-bottom">
+                    <div class="w3-card-4 w3-white project-card">
+                        <div class="w3-container project-body">
+                            <div>
+                                <h3>Amplificateur de Son Naturel</h3>
+                                <p class="w3-small w3-text-grey">Projet de Première (Innovation / Design)</p>
+                                <p>Création d'un amplificateur acoustique entièrement passif, sans aucun composant électronique, basé sur la forme et les matériaux naturels.</p>
+                            </div>
+                            <div class="w3-margin-top">
+                                <a href="#" class="w3-button bg-custom-cyan w3-block">Voir le projet <i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Compétences -->
+    <div id="competences" class="w3-container w3-padding-64 w3-white">
+        <div class="w3-content" style="max-width:900px">
+            <h2 class="w3-center w3-border-bottom w3-border-cyan w3-padding-16">Mes Compétences Techniques</h2>
+            
+            <div class="w3-row-padding w3-margin-top">
+                <div class="w3-col m6">
+                    <p>HTML5 / CSS3</p>
+                    <div class="w3-light-grey"><div class="w3-container bg-custom-cyan w3-center" style="width:90%">90%</div></div>
+                    
+                    <p>JavaScript (Bases)</p>
+                    <div class="w3-light-grey"><div class="w3-container bg-custom-cyan w3-center" style="width:50%">50%</div></div>
+                    
+                    <p>W3.CSS</p>
+                    <div class="w3-light-grey"><div class="w3-container bg-custom-cyan w3-center" style="width:90%">90%</div></div>
+                </div>
+                <div class="w3-col m6">
+                    <p>Git & GitHub</p>
+                    <div class="w3-light-grey"><div class="w3-container bg-custom-cyan w3-center" style="width:60%">60%</div></div>
+                    
+                    <p>VS Code (Environnement)</p>
+                    <div class="w3-light-grey"><div class="w3-container bg-custom-cyan w3-center" style="width:80%">80%</div></div>
+                    
+                    <p>Optimisation d'images (Convertio)</p>
+                    <div class="w3-light-grey"><div class="w3-container bg-custom-cyan w3-center" style="width:50%">50%</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Contact avec Formspree -->
+    <div id="contact" class="w3-container w3-padding-64 w3-light-grey">
+        <div class="w3-content" style="max-width:700px">
+            <h2 class="w3-center w3-border-bottom w3-border-cyan w3-padding-16">Contactez-moi</h2>
+            <p class="w3-center">Vous souhaitez me contacter pour un stage, un projet ou une collaboration ? Remplissez ce formulaire :</p>
+            
+            <form action="https://formspree.io/f/xvkzplaq" method="POST" class="w3-container w3-card-4 w3-white w3-padding-16 w3-margin-top">
+                <div class="w3-section">
+                    <label>Nom</label>
+                    <input class="w3-input w3-border" type="text" name="Nom" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="email" name="email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <textarea class="w3-input w3-border" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="w3-button bg-custom-cyan w3-block w3-section w3-padding">Envoyer le message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer class="w3-container bg-custom-dark w3-center w3-padding-32">
+        <p>Retrouvez-moi sur mon GitHub :</p>
+        <div class="w3-xlarge w3-padding">
+            <a href="https://github.com" target="_blank" class="w3-text-white w3-hover-text-cyan"><i class="fa fa-github w3-hover-opacity"></i></a>
+        </div>
+        <p class="w3-small">&copy; 2026 - [Votre Nom] | Réalisé avec W3.CSS et hébergé sur GitHub Pages</p>
+    </footer>
+
+    <!-- Script JavaScript externe -->
+    <script src="script.js"></script>
+</body>
+</html>

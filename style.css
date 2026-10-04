@@ -1,0 +1,41 @@
+/* Application de la police Poppins par défaut */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Personnalisation des couleurs principales */
+.bg-custom-dark {
+    background-color: #1a1a2e ;
+    color: #f1f1f1;
+}
+
+.text-custom-cyan {
+    color: #00adb5 ;
+}
+
+.bg-custom-cyan {
+    background-color: #00adb5 ;
+    color: white;
+}
+
+.w3-bar {
+    background-color: #0f0f1a ;
+}
+
+header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+/* Pour que toutes les cartes de projets aient la même hauteur et s'alignent parfaitement */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 24px ;
+}
